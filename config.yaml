@@ -1,0 +1,36 @@
+# Description: system config file
+
+# Kafka Server address:port (127.0.0.0:9092)
+kafka_server: "127.0.0.1:9092"
+
+# Mysql Server address:port (127.0.0.1:3306)
+mysql_server: "127.0.0.1:3306"
+
+# Mysql Config:user&password&database name
+mysql_user: " "
+mysql_password: " "
+mysql_database: " "
+
+# database config
+mysql_max_idle_conns: 20
+mysql_max_open_conns: 1000
+
+# Web Server (":8888" or "127.0.0.1:8888"）
+web_addr: "127.0.0.1:8888"
+
+# Snort&Suricata Rules Path
+rules_path: "./etc/RulesPath/"
+
+# IpLocation Databases Path
+# please update in time from https://dev.maxmind.com/geoip/geoip2/geolite2/
+ip_location_db: "./etc/LocationDatabase/GeoLite2-City.mmdb"
+
+# Machine Learning Model Path
+model_path: "./etc/model/keras/"
+
+# Temporary files path
+temp_path: "./etc/temp/"
+
+# Yara Rule Files Path (Optional)
+# Notice:This part of the functionality(Yara Detect) is not yet integrated into the system!
+yara_file: "./yarafile/"

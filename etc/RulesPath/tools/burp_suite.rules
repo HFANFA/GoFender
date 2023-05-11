@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg: "TOOLS Burp Suite tool activity. portswigger.net resolve"; dns_query; content: "portswigger.net"; reference: url, github.com/ptresearch/AttackDetection; classtype: string-detect; sid: 10006023; rev: 2;)

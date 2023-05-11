@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat center;
+    line-height: 1.15;
+}
+
+header {
+    position: relative;
+    height: 1.25rem;
+    background: url("../images/head_bg.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+header h1 {
+    font: icon;
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 1rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+}
+
+header .AuthorInfo {
+    position: absolute;
+    right: 0.375rem;
+    top: 0;
+    line-height: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.25rem;
+}
+
+header .index {
+    position: absolute;
+    left: 0.375rem;
+    top: 0;
+    cursor: pointer;
+    line-height: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.25rem;
+}
+
+.mainbox {
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0.125rem 0.125rem 0;
+    color: white;
+    /*  #panel-right1 {
+      height: 2.6rem;
+      width: 5rem;
+      margin: 20px auto;
+      padding: 0 0.15rem 0.4rem;
+      border-bottom: 100px;
+      .chart {
+        height: 1.7rem;
+      }*/
+}
+
+.mainbox .column {
+    flex: 2.5;
+}
+
+.mainbox .column:nth-child(2) {
+    flex: 5;
+}
+
+.mainbox .panel {
+    position: relative;
+    height: 3.7rem;
+    padding: 0 0.15rem 0.4rem;
+    margin: 20px auto;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+}
+
+.mainbox .panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a5b5;
+    border-top: 2px solid #02a5b5;
+}
+
+.mainbox .panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a5b5;
+    border-top: 2px solid #02a5b5;
+}
+
+.mainbox .panel .panel-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mainbox .panel .panel-footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #02a5b5;
+    border-bottom: 2px solid #02a5b5;
+}
+
+.mainbox .panel .panel-footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #02a5b5;
+    border-bottom: 2px solid #02a5b5;
+}
+
+.mainbox .panel h2 {
+    height: 0.6rem;
+    font-size: 0.25rem;
+    line-height: 0.6rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 350;
+}
+
+.mainbox .panel .chart {
+    height: 3rem;
+    color: black;
+}
+
+.mainbox .map {
+    position: relative;
+    height: 10.125rem;
+    font-size: 0.3rem;
+    text-align: center;
+}
+
+.mainbox .map .chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 10.125rem;
+    width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

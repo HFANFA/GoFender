@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="" xmlns="" xmlns="" xmlns="" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>GoFender网络入侵检测系统态势感知展示</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="./assets/css/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="icon"/>
+    <!-- 每 60s 自动刷新一次 -->
+    <meta content="60;url=./" http-equiv="Refresh"/>
+
+    <style type="text/css">
+        html, body {
+            overflow: hidden;
+        }
+
+        body {
+            background: url('./assets/img/bg.jpg') no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        #topDiv {
+            height: 50px;
+            padding: 10px 12px;
+            overflow: hidden;
+            *zoom: 1;
+        }
+
+        #topDiv .right {
+            float: right;
+            width: 180px;
+        }
+
+        #organization {
+            position: relative;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            font-size: 36px;
+            text-shadow: 0 0 5px #00c6ff;
+        }
+
+        #timeClock {
+            position: absolute;
+            color: #fff;
+            font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-shadow: 0 0 5px #00c6ff;
+            text-align: right;
+            top: 0;
+        }
+
+        #timeClock .time {
+            font-size: 26px;
+        }
+
+        /* nav STARTS */
+        .navigation {
+            top: 0;
+            margin: 0 auto;
+            float: left;
+            position: absolute;
+        }
+
+        #navList {
+            font-family: 'Miscrosoft Yahei', serif;
+            margin: 10px 0;
+            padding: 0;
+            *zoom: 1;
+            list-style: none;
+            overflow: hidden;
+            text-align: left;
+            top: 0;
+            display: flex;
+        }
+
+        .view-nav {
+            margin-left: auto;
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            padding: 0 5px;
+            min-width: 60px;
+        }
+
+        .view-nav.active {
+            background-color: #fc0;
+            color: #333;
+        }
+
+        /* nav ENDS */
+
+        /* monitor STARTS */
+        .monitor {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .monitor table {
+            width: 100%;
+        }
+
+        .monitor-inner {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .monitor-status {
+            border: 1px solid #fff;
+            border-bottom: 0;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        #sitesDiv .monitor-status {
+            position: absolute;
+            top: -1px;
+            left: -30px;
+            padding: 1em 0.5em;
+            width: 1em;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        #attacksDiv {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+        }
+
+        #attacksDiv .monitor-status {
+            position: absolute;
+            top: -34px;
+            right: 200px;
+            padding: 0.5em 1em;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        /* monitor ENDS */
+        .attack-detail {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #fff;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 13px;
+            padding: 4px 6px;
+        }
+
+        .attack-detail p {
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+<div id="topDiv">
+    <!--大标题-->
+    <div class="center">
+        <h2 id="organization">GoFender网络入侵检测系统态势感知展示页</h2>
+    </div>
+    <!--时间-->
+    <div class="right">
+        <div id="timeClock"></div>
+    </div>
+    <!--地理位置&&攻击详情-->
+    <div class="navigation">
+        <ul id="navList">
+            <li class="view-nav active J_changeView" data-type="world">世界</li>
+            <li class="view-nav J_changeView" data-type="china">中国</li>
+            <div id="dynamicNav"></div>
+            <!-- <li class="view-nav ViewInfo">攻击数据详情</li> -->
+        </ul>
+    </div>
+</div>
+
+<div id="mainContainer">
+    <div id="mapChart"></div>
+    <input id="orgAdminId" type="hidden" value="${orgAdmin.id}">
+
+    <div class="monitor" id="attacksDiv">
+        <div class="monitor-inner">
+            <table class="table table-condensed" id="attacksTable">
+                <thead>
+                <tr>    <!-- 在mainMap.js 设置具体显示 -->
+                    <th class="span2">攻击源IP</th>
+                    <th class="span2">攻击源地址</th>
+                    <th class="span2">攻击目的IP</th>
+                    <th class="span2">攻击目的地址</th>
+                    <th class="span2">攻击类型</th>
+                    <th class="span2">攻击时间</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <a class="monitor-status J_changeMonitor" data-orient="bottom" href="javascript:void(0)">收起</a>
+    </div>
+</div>
+
+
+<script src="http://cdn.staticfile.org/require.js/2.1.15/require.min.js" type="text/javascript"></script>
+<script src="./js/config.js" type="text/javascript"></script>
+<script src="./js/app/mainMap.js" type="text/javascript"></script>
+</body>
+</html>
