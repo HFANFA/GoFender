@@ -84,9 +84,10 @@ web_addr: "127.0.0.1:8888"
 http://127.0.0.1:8888/index/
 ```
 
-after that you will see:
+after that you will see a visualization page
 
 <img src=".github/demo.png" alt="demo img">
+
 This page is a network attack hotspot map, which simply shows the attack time, geographical location, attack type, attack source, attack target and other information.
 
 ## Reference
