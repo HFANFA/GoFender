@@ -39,7 +39,7 @@ completed.
 #### 1. Clone or download project
 
 ```shell
-# Mian Project + GoFender-WebUI
+# Mian Project + GoFender-WebUI(data visualization)
 git clone https://github.com/iFANGXIE/GoFender.git
 cd GoFender
 git clone https://github.com/iFANGXIE/GoFender-WebUI.git
@@ -66,6 +66,7 @@ mysql_database: "your mysql database name"
 
 # Web Server
 web_addr: "127.0.0.1:8888"
+Notice:You should also configure this address in config.json under GoFender-WebUI
 
 #The rest of the configuration items can remain default 
 ```
