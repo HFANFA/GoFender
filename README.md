@@ -36,7 +36,7 @@ completed.
 
 ## How to use?
 
-#### 1. Clone or dowload project
+#### 1. Clone or download project
 
 ```shell
 git clone https://github.com/iFANGXIE/GoFender.git
