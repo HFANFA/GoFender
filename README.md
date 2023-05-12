@@ -23,13 +23,13 @@ completed.
 
 ## Dependent environment and components
 
-### Require Environment
+### Require Environment(Installation Guide)
 
 - [Go 1.18+](https://go.dev/)
 - [Kafka](https://kafka.apache.org/documentation/#gettingStarted)
 - [MySQL](https://dev.mysql.com/doc/)
 
-### dependent library
+### dependent library(Installation Guide)
 
 - [libpcap](https://www.tcpdump.org/index.html#latest-releases) or [npcap](https://npcap.com/)
 - [TensorFlow-2.9.1 C library](https://www.tensorflow.org/install/lang_c)
