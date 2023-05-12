@@ -66,7 +66,6 @@ mysql_database: "your mysql database name"
 
 # Web Server
 web_addr: "127.0.0.1:8888"
-#Notice: After you change the default web address, you also need to change the interface address on line 211 of ./WebUI/js/app/mainMap.js
 
 #The rest of the configuration items can remain default 
 ```
