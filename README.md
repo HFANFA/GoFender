@@ -39,7 +39,10 @@ completed.
 #### 1. Clone or download project
 
 ```shell
+# Mian Project + GoFender-WebUI
 git clone https://github.com/iFANGXIE/GoFender.git
+cd GoFender
+git clone https://github.com/iFANGXIE/GoFender-WebUI.git
 ````
 
 #### 2. Install Go、Kafka、MySQL
