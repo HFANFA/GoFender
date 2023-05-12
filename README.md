@@ -95,7 +95,6 @@ This page is a network attack hotspot map, which simply shows the attack time, g
 - [Malicious-Traffic-Classification](https://github.com/BeStrongok/Malicious-Traffic-Classification)
 - [tfgo](https://github.com/galeone/tfgo)
 - [suricata-rules](https://github.com/al0ne/suricata-rules)
-- [attackMap](https://github.com/luckykeeper/attackMap)
 - [IP2Location](https://lite.ip2location.com/)
 - [GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/)
 - [traffic-analysis](https://github.com/netxfly/sec-dev-in-action-src/tree/main/traffic-analysis)
