@@ -3,6 +3,7 @@
     <h3 align="center">GoFender</h3>
     A minimalist NIDS based on Go and embedded with deep learning
 </div>
+<p></p>
 
 
 [![Golang](https://img.shields.io/badge/Go-1.18-blue.svg)](https://golang.org)
@@ -10,9 +11,7 @@
 ![windows](https://img.shields.io/badge/Supports-windows-green.svg)
 
 ------
-
 ## What's this?
-
 GoFender is a network intrusion detection system developed based on Go and integrated with deep learning technology.
 
 - Support distributed deployment
