@@ -23,13 +23,13 @@ completed.
 
 ## Dependent environment and components
 
-### Require Environment(Installation Guide)
+### Require environment(Installation Guide)
 
 - [Go 1.18+](https://go.dev/)
 - [Kafka](https://kafka.apache.org/documentation/#gettingStarted)
 - [MySQL](https://dev.mysql.com/doc/)
 
-### dependent library(Installation Guide)
+### Dependent library(Installation Guide)
 
 - [libpcap](https://www.tcpdump.org/index.html#latest-releases) or [npcap](https://npcap.com/)
 - [TensorFlow-2.9.1 C library](https://www.tensorflow.org/install/lang_c)
@@ -49,7 +49,7 @@ git clone https://github.com/iFANGXIE/GoFender-WebUI.git
 
 #### 3. Install dependent library
 
-#### 4. edit config file
+#### 4. Edit config file
 
 ```yaml
 # example config.yaml
@@ -78,7 +78,7 @@ web_addr: "127.0.0.1:8888"
  go run main.go
 ```
 
-#### 6.open web server address on your browser
+#### 6.Open web server address on your browser
 
 ```
 http://127.0.0.1:8888/index/
@@ -95,8 +95,7 @@ This page is a network attack hotspot map, which simply shows the attack time, g
 - [Malicious-Traffic-Classification](https://github.com/BeStrongok/Malicious-Traffic-Classification)
 - [tfgo](https://github.com/galeone/tfgo)
 - [suricata-rules](https://github.com/al0ne/suricata-rules)
-- [IP2Location](https://lite.ip2location.com/)
-- [GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/)
+- [IP2Location](https://lite.ip2location.com/) & [GeoLite2](https://dev.maxmind.com/geoip/geoip2/geolite2/)
 - [traffic-analysis](https://github.com/netxfly/sec-dev-in-action-src/tree/main/traffic-analysis)
 
 ## Copyright & License
