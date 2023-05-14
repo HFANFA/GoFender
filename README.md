@@ -40,9 +40,7 @@ completed.
 
 ```shell
 # Mian Project + GoFender-WebUI(data visualization)
-git clone https://github.com/iFANGXIE/GoFender.git
-cd GoFender
-git clone https://github.com/iFANGXIE/GoFender-WebUI.git
+git clone --recurse-submodules https://github.com/iFANGXIE/GoFender.git
 ````
 
 #### 2. Install Go、Kafka、MySQL

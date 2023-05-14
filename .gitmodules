@@ -1,0 +1,3 @@
+[submodule "GoFender-WebUI"]
+	path = GoFender-WebUI
+	url = https://github.com/iFANGXIE/GoFender-WebUI.git
