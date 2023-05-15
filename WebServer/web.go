@@ -41,7 +41,7 @@ func WebStart() {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 	r.Use(Cors())
-	r.Static("/index", "./WebUI")
+	r.Static("/index", "./GoFender-WebUI")
 	r.GET("/", func(c *gin.Context) {
 		c.Redirect(http.StatusMovedPermanently, "/index/index.html")
 	})
