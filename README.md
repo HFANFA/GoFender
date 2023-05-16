@@ -64,7 +64,6 @@ mysql_database: "your mysql database name"
 
 # Web Server
 web_addr: "127.0.0.1:8888"
-# Notice:You should also configure this address in config.json under GoFender-WebUI
 
 #The rest of the configuration items can remain default 
 ```
